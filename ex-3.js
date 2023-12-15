@@ -8,14 +8,14 @@ class User {
 }
 
 class postList {
-  constructor (posts) {
-    this.posts = [posts];
+  constructor () {
+    this.posts = [];
   }
-  addPost (pushPost) {
-    this.posts.push(pushPost)
+  addPost (post) {
+    this.posts.push(post)
   }
-  sharePost (postTitle) {
-    console.log (`You've shared post ${postTitle} to your friend.`)
+  sharePost (postId) {
+    console.log(`You've shared post ${postId.title} to your friend.`)
   }
 }
 
@@ -82,5 +82,4 @@ const resultComment = new Comment(3,"streetFood","Donut")
 resultPost.addComment(resultComment)
 const notificationPost = new Notification(1)
 notificationPost.send(resultPost)
-
 console.log(resultPost)
