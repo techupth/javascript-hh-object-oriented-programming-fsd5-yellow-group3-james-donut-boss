@@ -21,21 +21,14 @@ class PostList {
             id: this.posts.length + 1,
             title: post.title,
             content: post.content,
-            comments: post.comments
+            comment: post.comment
         });
     }
 
-    sharePost(Id) {
-        console.log(`You've shared post ${this.posts[Id - 1].title} to your friend.`)
+    sharePost(id) {
+        console.log(`You've shared post ${this.posts[id - 1].title} to your friend.`)
     }
 }
-/*////
-const postList1 = new PostList("abc");
-console.log(postList1);
-postList1.addPost("FirstPostBaby");
-console.log(postList1);
-postList1.sharePost();
-*/////
 
 class Post {
     constructor(id, title, content, comment) {
@@ -49,11 +42,19 @@ class Post {
     }
 }
 /*
-const post1 = new Post("a123","nowhere","place");
+const post1 = new Post(1,"nowhere","place");
 console.log(post1);
 post1.addComment("placeNo.1");
 console.log(post1);
 */
+
+/*//execute จาก postList
+const postList1 = new PostList();
+console.log(postList1);
+postList1.addPost(post1);
+console.log(postList1);
+postList1.sharePost(1);
+*/ //execute จาก postList
 
 class Comment {
     constructor(id, content, createdBy, like) {
